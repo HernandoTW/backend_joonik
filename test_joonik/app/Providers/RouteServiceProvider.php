@@ -8,14 +8,7 @@ use Illuminate\Support\Facades\Route;
 class RouteServiceProvider extends ServiceProvider
 {
     /**
-     * This is the path to the "home" route for your application.
-     *
-     * @var string
-     */
-    public const HOME = '/home';
-
-    /**
-     * The path to the "api" route for your application.
+     * This is the path where your routes are stored.
      *
      * @var string
      */
@@ -28,7 +21,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        parent::boot();
     }
 
     /**
@@ -39,24 +32,28 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-
         $this->mapWebRoutes();
     }
 
     /**
      * Define the "api" routes for the application.
      *
+     * These routes are typically stateless.
+     *
      * @return void
      */
     protected function mapApiRoutes()
     {
-        Route::middleware('api')
+        Route::prefix('api')
+            ->middleware('api')
             ->namespace($this->namespace)
             ->group(base_path('routes/api.php'));
     }
 
     /**
      * Define the "web" routes for the application.
+     *
+     * These routes are typically stateful.
      *
      * @return void
      */

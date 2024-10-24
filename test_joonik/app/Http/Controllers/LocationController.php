@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
-    // Simulamos cargue de sedes
     private $locations = [
         [
             'code' => 1,
@@ -26,14 +25,12 @@ class LocationController extends Controller
             'image' => 'https://via.placeholder.com/150',
             'creationDate' => '2022-03-10',
         ],
-        ,
         [
             'code' => 4,
             'name' => 'Sede Oriental',
             'image' => 'https://via.placeholder.com/150',
             'creationDate' => '2022-03-10',
         ],
-        ,
         [
             'code' => 5,
             'name' => 'Sede Costa Pacífica',
