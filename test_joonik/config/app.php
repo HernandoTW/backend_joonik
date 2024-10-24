@@ -118,15 +118,15 @@ return [
     |
     */
 
-'providers' => [
+    'providers' => [
 
-    Illuminate\Auth\AuthServiceProvider::class,
-    Illuminate\Broadcasting\BroadcastServiceProvider::class,
-    Illuminate\Bus\BusServiceProvider::class,
-    Illuminate\Cache\CacheServiceProvider::class,
-    App\Providers\AppServiceProvider::class,
-    App\Providers\RouteServiceProvider::class,
-],
+        Illuminate\Auth\AuthServiceProvider::class,
+        Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        Illuminate\Bus\BusServiceProvider::class,
+        Illuminate\Cache\CacheServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\RouteServiceProvider::class
+    ],
 
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
